@@ -48,8 +48,7 @@
   :init (doom-modeline-mode 1))
 
 ;; === Icons ===
-(use-package all-the-icons
-  :if (display-graphic-p))
+(use-package nerd-icons)
 
 ;; === Which-Key ===
 (use-package which-key
@@ -144,6 +143,9 @@
   (next-line 1)
   (yank))
 (global-set-key (kbd "C-c d") 'duplicate-line)
+
+;; === Delete Line ===
+(global-set-key (kbd "C-S-k") 'kill-whole-line)
 
 ;; === Comment Line ===
 (global-set-key (kbd "C-/") 'comment-line)

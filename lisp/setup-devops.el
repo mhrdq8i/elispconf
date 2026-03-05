@@ -24,12 +24,6 @@
 (use-package ansible-doc
   :after ansible)
 
-(use-package terraform-mode
-  :mode "\\.tf\\'"
-  :hook (terraform-mode . eglot-ensure)
-  :config
-  (setq terraform-indent-level 2))
-
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
                '(terraform-mode . ("terraform-ls" "serve"))))
