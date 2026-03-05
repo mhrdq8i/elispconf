@@ -93,4 +93,4 @@
 
 (global-set-key (kbd "C-c T f") 'toggle-format-on-save)
 
-(provide 'formatting)
+(provide 'setup-formatting)

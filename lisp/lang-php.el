@@ -26,4 +26,4 @@
   (define-key php-mode-map (kbd "C-c r") 'php-run)
   (define-key php-mode-map (kbd "C-c l") 'php-lint))
 
-(provide 'php)
+(provide 'lang-php)

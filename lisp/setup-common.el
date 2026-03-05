@@ -148,4 +148,4 @@
 ;; === Comment Line ===
 (global-set-key (kbd "C-/") 'comment-line)
 
-(provide 'common)
+(provide 'setup-common)

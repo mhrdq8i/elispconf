@@ -34,4 +34,4 @@
   (add-to-list 'eglot-server-programs
                '(terraform-mode . ("terraform-ls" "serve"))))
 
-(provide 'devops)
+(provide 'setup-devops)

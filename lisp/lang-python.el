@@ -34,4 +34,4 @@
   (define-key python-mode-map (kbd "C-c r") 'python-run)
   (define-key python-mode-map (kbd "C-c t") 'python-run-tests))
 
-(provide 'python)
+(provide 'lang-python)

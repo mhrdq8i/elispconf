@@ -37,4 +37,4 @@
   (add-to-list 'eglot-server-programs
                '(js2-mode . ("typescript-language-server" "--stdio"))))
 
-(provide 'web)
+(provide 'lang-web)

@@ -36,4 +36,4 @@
 (use-package protobuf-mode
   :mode "\\.proto\\'")
 
-(provide 'data-formats)
+(provide 'setup-data-formats)

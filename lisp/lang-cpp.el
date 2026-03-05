@@ -47,4 +47,4 @@
   (define-key c-mode-map (kbd "C-c r") 'cpp-run)
   (define-key c++-mode-map (kbd "C-c r") 'cpp-run))
 
-(provide 'cpp)
+(provide 'lang-cpp)

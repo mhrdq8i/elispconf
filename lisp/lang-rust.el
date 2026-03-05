@@ -50,4 +50,4 @@
   (define-key rust-mode-map (kbd "C-c l") 'cargo-clippy)
   (define-key rust-mode-map (kbd "C-c C-f") 'cargo-fmt))
 
-(provide 'rust)
+(provide 'lang-rust)

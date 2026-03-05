@@ -34,4 +34,4 @@
 (use-package forge
   :after magit)
 
-(provide 'git)
+(provide 'setup-git)

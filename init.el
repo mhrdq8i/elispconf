@@ -22,18 +22,18 @@
 ;; ============================================================
 ;; Load Modular Configs
 ;; ============================================================
-(require 'common)
-(require 'formatting)    ; Code formatters & linters
-(require 'git)
-(require 'rust)
-(require 'python)
-(require 'markdown)
-(require 'web)
-(require 'php)
-(require 'bash)
-(require 'devops)
-(require 'data-formats)
-(require 'cpp)
+(require 'setup-common)
+(require 'setup-formatting)
+(require 'setup-git)
+(require 'lang-rust)
+(require 'lang-python)
+(require 'lang-markdown)
+(require 'lang-web)
+(require 'lang-php)
+(require 'lang-bash)
+(require 'setup-devops)
+(require 'setup-data-formats)
+(require 'lang-cpp)
 
 ;; ============================================================
 ;; Custom variables in separate file
@@ -43,3 +43,4 @@
   (load custom-file))
 
 (message "Emacs configuration loaded successfully!")
+

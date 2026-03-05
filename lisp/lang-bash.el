@@ -35,4 +35,4 @@
   (define-key sh-mode-map (kbd "C-c r") 'bash-run)
   (define-key sh-mode-map (kbd "C-c c") 'bash-check))
 
-(provide 'bash)
+(provide 'lang-bash)

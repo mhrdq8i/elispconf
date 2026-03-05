@@ -26,4 +26,4 @@
   :bind (:map markdown-mode-map
               ("C-c C-t" . markdown-toc-generate-toc)))
 
-(provide 'markdown)
+(provide 'lang-markdown)
