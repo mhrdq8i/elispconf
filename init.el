@@ -16,6 +16,7 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+
 (require 'use-package)
 (setq use-package-always-ensure t)
 
@@ -23,17 +24,12 @@
 ;; Load Modular Configs
 ;; ============================================================
 (require 'setup-common)
-(require 'setup-formatting)
 (require 'setup-git)
 (require 'lang-rust)
 (require 'lang-python)
 (require 'lang-markdown)
-(require 'lang-web)
-(require 'lang-php)
 (require 'lang-bash)
 (require 'setup-devops)
-(require 'setup-data-formats)
-(require 'lang-cpp)
 
 ;; ============================================================
 ;; Custom variables in separate file
