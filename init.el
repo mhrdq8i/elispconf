@@ -26,9 +26,7 @@
 (require 'setup-common)
 (require 'setup-git)
 (require 'lang-rust)
-(require 'lang-python)
 (require 'lang-markdown)
-(require 'lang-bash)
 (require 'setup-devops)
 
 ;; ============================================================
