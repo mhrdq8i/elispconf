@@ -13,6 +13,10 @@
   (add-to-list 'eglot-server-programs
                '(rust-mode . ("rust-analyzer"))))
 
+(use-package apheleia
+  :config
+  (apheleia-global-mode +1))
+
 (use-package toml-mode
   :mode "\\.toml\\'")
 
@@ -47,6 +51,6 @@
   (define-key rust-mode-map (kbd "C-c c") 'cargo-check)
   (define-key rust-mode-map (kbd "C-c t") 'cargo-test)
   (define-key rust-mode-map (kbd "C-c l") 'cargo-clippy)
-  (define-key rust-mode-map (kbd "C-c C-f") 'cargo-fmt))
+  (define-key rust-mode-map (kbd "C-c f") 'cargo-fmt))
 
 (provide 'lang-rust)

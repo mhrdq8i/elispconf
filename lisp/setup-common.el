@@ -19,7 +19,7 @@
 (setq auto-save-default nil)
 (setq create-lockfiles nil)
 (setq require-final-newline t)           ; Newline at end of file
-(setq show-trailing-whitespace t)        ; Show trailing whitespace
+(setq-default show-trailing-whitespace t)        ; Show trailing whitespace
 
 ;; === Scrolling ===
 (setq scroll-margin 3)
@@ -88,7 +88,7 @@
 
 ;; === File Tree ===
 (use-package treemacs
-  :bind ("C-c t" . treemacs))
+  :bind ("C-c T" . treemacs))
 
 ;; === Undo Tree (visual undo) ===
 (use-package undo-tree
@@ -148,6 +148,6 @@
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 
 ;; === Comment Line ===
-(global-set-key (kbd "C-/") 'comment-line)
+(global-set-key (kbd "C-c /") 'comment-line)
 
 (provide 'setup-common)
