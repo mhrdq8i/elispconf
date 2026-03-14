@@ -9,7 +9,6 @@
 (scroll-bar-mode -1)
 (global-display-line-numbers-mode 1)
 (column-number-mode 1)
-(set-face-attribute 'default nil :height 120)
 (global-hl-line-mode 1)                  ; Highlight current line
 
 ;; === Editor Behavior ===
@@ -19,7 +18,7 @@
 (setq auto-save-default nil)
 (setq create-lockfiles nil)
 (setq require-final-newline t)           ; Newline at end of file
-(setq-default show-trailing-whitespace t)        ; Show trailing whitespace
+(setq-default show-trailing-whitespace t) ; Show trailing whitespace
 
 ;; === Scrolling ===
 (setq scroll-margin 3)
@@ -37,18 +36,6 @@
 ;; === Encoding ===
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
-
-;; === Theme ===
-(use-package doom-themes
-  :config
-  (load-theme 'doom-one t))
-
-;; === Modeline ===
-(use-package doom-modeline
-  :init (doom-modeline-mode 1))
-
-;; === Icons ===
-(use-package nerd-icons)
 
 ;; === Which-Key ===
 (use-package which-key
@@ -90,6 +77,14 @@
 (use-package treemacs
   :bind ("C-c T" . treemacs))
 
+;; === Minimap (code overview sidebar) ===
+(use-package minimap
+  :bind ("C-c m" . minimap-mode)
+  :config
+  (setq minimap-window-location 'right)
+  (setq minimap-width-fraction 0.1)
+  (setq minimap-minimum-width 15))
+
 ;; === Undo Tree (visual undo) ===
 (use-package undo-tree
   :config
@@ -127,6 +122,10 @@
 (use-package ace-window
   :bind ("M-o" . ace-window))
 
+;; === Terminal ===
+(use-package vterm
+  :bind ("C-c v" . vterm))
+
 ;; === Global Keybindings ===
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -134,20 +133,21 @@
 
 ;; === Duplicate Line ===
 (defun duplicate-line ()
-  "Duplicate current line."
+  "Duplicate current line without touching kill ring."
   (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (open-line 1)
-  (next-line 1)
-  (yank))
+  (let ((line (buffer-substring
+               (line-beginning-position)
+               (line-end-position))))
+    (end-of-line)
+    (newline)
+    (insert line)))
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
 ;; === Delete Line ===
-(global-set-key (kbd "C-S-k") 'kill-whole-line)
+(global-set-key (kbd "C-c k") 'kill-whole-line)
 
 ;; === Comment Line ===
 (global-set-key (kbd "C-c /") 'comment-line)
 
 (provide 'setup-common)
+

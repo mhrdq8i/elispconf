@@ -4,3 +4,8 @@ places
 projectile-bookmarks.eld
 undo/
 auto-save-list/
+eshell/
+lisp/*.elc
+transient/
+.cache/
+custom.el

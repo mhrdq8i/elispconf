@@ -24,6 +24,8 @@
 ;; Load Modular Configs
 ;; ============================================================
 (require 'setup-common)
+(require 'setup-theme)
+(require 'setup-font)
 (require 'setup-git)
 (require 'lang-rust)
 (require 'lang-markdown)

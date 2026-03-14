@@ -9,6 +9,7 @@
   :config
   (setq rust-format-on-save nil))  ; Using apheleia instead
 
+
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
                '(rust-mode . ("rust-analyzer"))))
@@ -54,3 +55,4 @@
   (define-key rust-mode-map (kbd "C-c f") 'cargo-fmt))
 
 (provide 'lang-rust)
+
