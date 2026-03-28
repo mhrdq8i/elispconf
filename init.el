@@ -27,6 +27,7 @@
 (require 'setup-theme)
 (require 'setup-font)
 (require 'setup-git)
+(require 'setup-keys)
 (require 'lang-rust)
 (require 'lang-markdown)
 (require 'setup-devops)
@@ -39,4 +40,3 @@
   (load custom-file))
 
 (message "Emacs configuration loaded successfully!")
-
