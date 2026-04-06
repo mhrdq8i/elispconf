@@ -51,5 +51,5 @@
 
 (global-set-key (kbd "C-c SPC") 'hydra-navigate/body)
 
-(provide 'setup-keys)
+(provide 'setup-vim-keys)
 ;;; setup-keys.el ends here

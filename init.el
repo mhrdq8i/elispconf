@@ -27,7 +27,7 @@
 (require 'setup-theme)
 (require 'setup-font)
 (require 'setup-git)
-(require 'setup-keys)
+(require 'setup-vim-keys)
 (require 'lang-rust)
 (require 'lang-markdown)
 (require 'setup-devops)

@@ -44,7 +44,12 @@
 
 (defun cargo-fmt ()
   (interactive)
-  (shell-command "cargo fmt"))
+  (let* ((root (locate-dominating-file default-directory "Cargo.toml"))
+         (default-directory (or root default-directory))
+	)
+    (shell-command "cargo fmt")
+  )
+)
 
 (with-eval-after-load 'rust-mode
   (define-key rust-mode-map (kbd "C-c r") 'cargo-run)

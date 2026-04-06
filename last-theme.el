@@ -1,1 +1,1 @@
-(load-theme 'wombat t)
+(load-theme 'doom-acario-dark t)

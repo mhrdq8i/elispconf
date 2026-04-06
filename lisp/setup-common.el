@@ -15,7 +15,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq make-backup-files nil)
-(setq auto-save-default nil)
+(setq auto-save-default t)
 (setq create-lockfiles nil)
 (setq require-final-newline t)           ; Newline at end of file
 (setq-default show-trailing-whitespace t) ; Show trailing whitespace

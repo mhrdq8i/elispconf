@@ -1,1 +1,1 @@
-(set-face-attribute 'default nil :family "Hack" :height 120)
+(set-face-attribute 'default nil :family "Ubuntu Mono" :height 120)
