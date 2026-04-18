@@ -26,7 +26,7 @@
 Remove the inside of `~/.emacs.d` 
 
 ```bash
-rm -rf ~/.emacs.d/*
+rm -rf ~/.emacs.d/* && mv elispconf ~/.emacs.d/
 ```
 
 Copy each file that you want on path `~/.emacs.d`.
